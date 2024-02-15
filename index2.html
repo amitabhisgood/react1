@@ -21,10 +21,42 @@
 
   <!-- Include your React component -->
   <!-- <script type="text/babel" src="https://drive.google.com/file/d/1SQLq4qv_lsTB4a8UCjmJi7hi_VYEbG_1"></script> -->
- <script type="text/babel" src="./MenuBar.js"></script>
+ <script>
+   
+import React from 'react';
+
+const MenuBar = () => {
+  return (
+    <div>
+      {/* Header section */}
+      <header>
+        <h1>Simple Menu Bar</h1>
+      </header>
+
+      {/* Navigation menu */}
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      {/* Content section */}
+      <div>
+        {/* Your content goes here */}
+      </div>
+    </div>
+  );
+};
+
+export default MenuBar;
+
+ </script>
 
   <!-- Render the React component -->
-  <script type="text/babel">
+  <script>
     ReactDOM.render(
       React.createElement(MenuBar),
       document.getElementById('app')
