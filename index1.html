@@ -1,0 +1,35 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Menu Bar</title>
+</head>
+<body>
+
+  <!-- Container element for React rendering -->
+  <div id="app"></div>
+
+  <!-- Include React and ReactDOM from CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  <!-- Include Babel for JSX compilation -->
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+  <!-- Include your React component -->
+  <!-- <script type="text/babel" src="https://drive.google.com/file/d/1SQLq4qv_lsTB4a8UCjmJi7hi_VYEbG_1"></script> -->
+ <script type="text/babel" src="./MenuBar.js"></script>
+
+  <!-- Render the React component -->
+  <script type="text/babel">
+    ReactDOM.render(
+      React.createElement(MenuBar),
+      document.getElementById('app')
+    );
+  </script>
+
+</body>
+</html>
