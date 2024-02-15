@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple React App</title>
+  <!-- Include React and ReactDOM libraries -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+<body>
+  <div id="root"></div> <!-- Root element where React will render -->
+  
+  <!-- React component -->
+  <script>
+    // Define a simple React component
+    const App = () => {
+      return (
+        <div>
+          <h1>Hello, React!</h1>
+          <p>This is a very simple React app.</p>
+        </div>
+      );
+    };
+
+    // Render the component to the DOM
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
