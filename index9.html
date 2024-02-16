@@ -1,0 +1,73 @@
+Certainly! You can modify the previous example to create a horizontal menu bar as a header. Here's a simple example:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Menu Bar React Example</title>
+  <!-- Include React and ReactDOM from CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <!-- Include Babel for JSX transformation -->
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+  <style>
+    /* Add some basic styling for the header and menu */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #444;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container element for React rendering -->
+  <div id="app"></div>
+
+  <script type="text/babel">
+    // React component
+    const HorizontalMenuBar = () => {
+      return (
+        <div>
+          <header>
+            <h1>My Website</h1>
+          </header>
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+        </div>
+      );
+    };
+
+    // Render the component inside the specified HTML element
+    ReactDOM.render(
+      <HorizontalMenuBar />,
+      document.getElementById('app')
+    );
+  </script>
+
+</body>
+</html>
+```
+
+In this example, I've added a `<header>` element to serve as the header of your website. Inside the header, there's an `<h1>` element with the text "My Website." Below the header, there's a `<nav>` element containing three links (Home, About, and Contact). The styling in the `<style>` section provides a basic appearance for the header and menu.
+
+Feel free to customize the styling and content according to your needs. This example provides a starting point for a simple horizontal menu bar in React.
