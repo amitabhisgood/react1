@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello World React Example</title>
   <!-- Include React and ReactDOM from CDN -->
-<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <!-- Include Babel for JSX transformation -->
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
 
 </head>
 <body>
@@ -14,7 +16,7 @@
   <!-- Container element for React rendering -->
   <div id="app"></div>
 
-  <script>
+  <script type="text/babel">
     // React component
     const HelloWorld = () => {
       return (
@@ -24,9 +26,7 @@
 
     // Render the component inside the specified HTML element
     ReactDOM.render(
-      React.createElement(HelloWorld, null),
-      document.getElementById('app')
-    );
+      React.createElement(<HelloWorld />, document.getElementById('app'));
   </script>
 
 </body>
