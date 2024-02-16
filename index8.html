@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Menu Bar Example</title>
+  <!-- Include React and ReactDOM from CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <!-- Include Babel for JSX transformation -->
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+
+  <!-- Container element for React rendering -->
+  <div id="app"></div>
+
+  <script type="text/babel">
+    // React component
+    const MenuBar = () => {
+      const [menuOpen, setMenuOpen] = React.useState(false);
+
+      const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+      };
+
+      return (
+        <div>
+          <button onClick={toggleMenu}>Toggle Menu</button>
+          {menuOpen && (
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+          )}
+        </div>
+      );
+    };
+
+    // Render the component inside the specified HTML element
+    ReactDOM.render(
+      React.createElement(MenuBar,null), document.getElementById('app'));
+  </script>
+
+</body>
+</html>
